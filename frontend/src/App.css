@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap");
+
+
 * {
   padding: 0px;
   margin: 0px;
@@ -17,6 +19,7 @@ body {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .placein {
@@ -45,7 +48,7 @@ body {
   border-radius: 50%;
   position: relative;
   left: 300px;
-  top: 15px;
+  top: 10px;
   border: none;
   color: white;
   padding: 5px;
@@ -67,17 +70,15 @@ body {
   background: transparent;
   box-shadow: 4px 4px 15px -10px rgba(0, 0, 0, 0.9);
   width: min-content;
-  height: 165px;
+  height: 120px;
 }
 .note {
-  margin: 60px;
+  margin: 90px;
   outline: none;
   display: inline-block;
   background: transparent;
   box-shadow: 4px 4px 15px -10px rgba(0, 0, 0, 0.9);
-  width: 350px;
-  padding-left: 15px;
-  padding-top: 5px;
+  width: max-content;
   background-color: white;
 }
 .icons {
@@ -163,4 +164,19 @@ hr {
 
 .form-control.shadow-0:focus {
   box-shadow: none;
+}
+
+.profile{
+  color: rgb(97, 9, 97);
+  font-weight: bold;
+  text-emphasis-color: rgb(97, 9, 97);
+
+}
+
+
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+  border-radius: 50%;
 }

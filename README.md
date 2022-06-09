@@ -45,12 +45,12 @@ Mapped these menu items into card components dynamically from an array. <br/>
 
 ### Order
 
-I have implemented a To-Do list to take orders in the placing orders section. <br/>
+I used an API to get good items based on the user search, the result will get displayed in form of cards on the screen. You can see the API used [here](https://www.themealdb.com/api.php)<br/>
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/order.png" width = "1100px">
 
 ### Navbar
 
-Used React useContext hook along with useReducer hook to manage state globally in the application. If the user is logged in successfully, logout option will appear.
+Used React useContext hook (Context API) along with useReducer hook to manage state globally in the application and to toggle the navbar elements. If the user is logged in successfully, logout option will appear. Username of the logged-in user will be shown on the navbar.
 
 #### Before
 

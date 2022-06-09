@@ -33,10 +33,10 @@ const Login = () => {
         pass,
       })
     });
-    console.log(res);
     const data = await res.json();
     console.log(data);
-        if(res.status === 400 || !data){
+    
+    if(res.status === 400 || !data){
       window.alert("Invalid Credentials");
     }
     else {

@@ -8,11 +8,13 @@ import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import Footer from './Components/Footer';
-import Orders from './Components/Orders';
 import About from './Components/About';
 import Logout from './Components/Logout';
 import { createContext, useReducer } from 'react';
 import {initialState, reducer} from '../src/Components/Usereducer'
+import Order from './Components/Order';
+import MakeOrder from './Components/MakeOrder';
+
 
 export const userContext = createContext();
 
@@ -40,7 +42,7 @@ function App() {
       <Register/>
     </Route> 
     <Route exact path ="/orders">
-      <Orders/>
+     <MakeOrder/>
     </Route>
     <Route exact path ="/logout">
       <Logout/>

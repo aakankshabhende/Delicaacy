@@ -74,11 +74,20 @@ const Navbar = () => {
                   Order
                 </NavLink>
               </li>
+              <li className="nav-item profile">
+                <NavLink to="/" className="nav-link" >
+                <i class="fa fa-user" aria-hidden="true">&ensp;</i> 
+                  {localStorage.getItem("username")}
+                  &ensp;&ensp;
+                </NavLink>
+                
+              </li>
               <li className="nav-item dropdown">
                 <NavLink to="/logout" className="nav-link" >
                   Logout
                 </NavLink>
               </li>
+              
             </div>
             <li className="nav-item">
               <a id="side-search-open" className="nav-link" href="#">

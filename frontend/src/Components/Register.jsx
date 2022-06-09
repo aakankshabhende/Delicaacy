@@ -42,6 +42,7 @@ const Signup = () => {
     value = e.target.value;
 
     setuser({ ...user, [name]: value }); //[] to store dynamic data name will have e.target.value direct coz of []
+    localStorage.setItem("username", user.name);
   };
 
   const postdata = async (e) => {
