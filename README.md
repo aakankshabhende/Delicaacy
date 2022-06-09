@@ -49,13 +49,17 @@ I have used an API to get food items based on the user search, the result will g
 <br/>You can check the API used [here](https://www.themealdb.com/api.php)<br/><br/>
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/order.png" width = "1100px">
 
+### Select the items you want
+
+<br/><br/><img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/menu_list.png" width = "1100px">
+
 ### After making your Fav Order 🥗
 
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/orders.png" width = "1100px">
 
 ## Navbar
 
-Used React useContext hook (Context API) along with useReducer hook to manage state globally in the application and to toggle the navbar elements. 
+Used React useContext hook (Context API) along with useReducer hook to manage state globally in the application and to toggle the navbar elements.
 
 ### Before
 
