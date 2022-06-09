@@ -34,7 +34,7 @@ const Home = () => {
               <div class="mb-2">
                 <a
                   class="btn btn-primary btn-shadow btn-lg"
-                  href="#gtco-menu"
+                  href="/orders"
                   role="button"
                   style={{
                     backgroundColor: "#f34949",
