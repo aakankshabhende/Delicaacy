@@ -174,7 +174,7 @@ const Navbar = () => {
               </li>
             </div>
             <li className="nav-item">
-              <a id="side-search-open" className="nav-link" href="#">
+              <a id="side-search-open" className="nav-link" href="/orders">
                 <span className="lnr lnr-magnifier"></span>
               </a>
             </li>
