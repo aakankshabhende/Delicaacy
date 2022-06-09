@@ -50,8 +50,7 @@ I have used an API to get food items based on the user search, the result will g
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/order.png" width = "1100px">
 
 ### Select the items you want
-
-<br/><br/><img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/menu_list.png" width = "1100px">
+<img src="https://github.com/aakankshabhende/Delicaacy/blob/main/pics/menu_list.png" width = "1100px">
 
 ### After making your Fav Order 🥗
 
