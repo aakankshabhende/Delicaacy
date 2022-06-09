@@ -34,31 +34,36 @@ const Order = (props) => {
 
   return (
     <>
-      
-
-        <div class="col-md-4 mb-4 main">
-          <div class="input-group md-form form-sm form-2 pl-0 ">
-            <input
-              class="form-control my-0 py-1 amber-border"
-              type="text"
-              name="title"
-              value={menu.title}
-              onChange={srch}
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <div class="input-group-append">
-              <button class="input-group-text amber lighten-3">
-                <i
-                  class="fas fa-search text-grey"
-                  onClick={add}
-                  aria-hidden="true"
-                ></i>
-              </button>
-            </div>
+      <div class="col-md-4 mb-4 main">
+        <div class="input-group md-form form-sm form-2 pl-0 ">
+          <select
+            class="form-control my-0 py-1 amber-border"
+            type="text"
+            name="title"
+            value={menu.title}
+            onChange={srch}
+            placeholder="Search"
+            aria-label="Search"
+          >
+            <option value="">Have a Look at Our Menu! 🥗</option>
+            <option value="pizza">Pizza</option>
+            <option value="burger">Burger</option>
+            <option value="noodles">Noodles</option>
+            <option value="pasta">Pasta</option>
+            <option value="pancakes">Pancakes</option>
+            <option value="vegan lasagna"> Vegan Lasagna</option>
+          </select>
+          <div class="input-group-append">
+            <button class="input-group-text amber lighten-3">
+              <i
+                class="fas fa-search text-grey"
+                onClick={add}
+                aria-hidden="true"
+              ></i>
+            </button>
           </div>
         </div>
-      
+      </div>
     </>
   );
 };
