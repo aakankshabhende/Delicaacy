@@ -206,13 +206,7 @@ const Signup = () => {
                   </span>
                   <div class="border-bottom w-100 mr-5"></div>
                 </div>
-              
-                
-
-                         
-
-                <div class="text-center w-100">
-                
+                <div class="text-center w-100">                
                 <div> 
                 { showloginButton ?
                 <GoogleLogin
@@ -232,8 +226,7 @@ const Signup = () => {
                 >
                 </GoogleLogout> : null
             }
-        </div>
-                  
+              </div>      
                 </div>
               </div>
             </form>
