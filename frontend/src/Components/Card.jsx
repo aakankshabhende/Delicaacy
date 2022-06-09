@@ -1,7 +1,15 @@
 import React from 'react'
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Badge from "@material-ui/core/Badge";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Button from "@material-ui/core/Button";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove"
 
 const Card = (props) => {
+  const [itemCount, setItemCount] = React.useState(1);
+  
   const deletenote = () =>{
     props.deleteitem(props.id);
 }
@@ -13,11 +21,38 @@ const Card = (props) => {
   <div class="card-body">
     <h5 class="card-title">{props.title}</h5>
   </div>
-  <button className="b" onClick={deletenote}>
-     <DeleteOutlineIcon />
-  </button>
-  <div class="card-body">
   
+  <div class="row">
+  <div class="col-sm-2">
+  <Badge color="secondary" badgeContent={itemCount}>
+          <ShoppingCartIcon />
+        </Badge>
+      </div>
+    <div class="col-sm-3">
+    <Button
+            onClick={() => {
+              setItemCount(Math.max(itemCount - 1, 0));
+            }}
+          >
+            <RemoveIcon fontSize="small" />
+          </Button>
+      </div>
+      <div className='col-sm-3'>        
+         <Button         
+            onClick={deletenote}
+         >
+           <DeleteOutlineIcon/>
+         </Button>
+      </div>
+      <div className='col-sm-3'>
+      <Button
+            onClick={() => {
+              setItemCount(itemCount + 1);
+            }}
+          >
+            <AddIcon fontSize="small" />
+          </Button>
+      </div>
   </div>
 </div>
 </div>
