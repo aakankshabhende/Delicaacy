@@ -12,7 +12,7 @@ This project is a restaurant-based web application built over the MERN stack to 
 <br>
 
 <p> 
-I have built a REST API to provide the easy management of sign-in, registration, contact and ordering components. I tested this API using Postman. The frontend and the backend are fully connected and I have handled the CORS error which came while pushing data from the frontend to the backend using proxy server.
+This is my first MERN stack application :) where I have built a REST API to provide the easy management of sign-in, registration, contact and ordering components. I tested this API using Postman. The frontend and the backend are fully connected and I have handled the CORS error which came while pushing data from the frontend to the backend using proxy server.
 </p>
 
 # Components
