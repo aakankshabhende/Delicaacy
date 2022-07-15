@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 
-dotenv.config({ path: './config.env' });
+dotenv.config({ path: './config.env' });  // Including environment variables
 
 require('./db/conn');
 
-app.use(express.json());
+app.use(express.json());    // middleware
 
 // we link the router files to make our route easy as it is above the below rooting code app.get won't work
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 
 // Middelware 
