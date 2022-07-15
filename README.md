@@ -2,20 +2,16 @@
 
 A restaurant-based web application built over the MERN stack to provide clients a quick, responsive web application with better, modern, and simple UI and User Experience with fast ordering options.<br>
 
-##### Getting Started
+## Getting Started
+These instructions will get you a copy of this project running on your local machine for development and testing purposes. It also contains development details. Click [here](https://github.com/aakankshabhende/Delicaacy/blob/main/Getting-Started.md)
 
-Click [here](https://github.com/aakankshabhende/Delicaacy/blob/main/Getting-Started.md)<br/>
-These instructions will get you a copy of this project running on your local machine for development and testing purposes. It also contains development details.
-
-# Tech Stack
+## Tech Stack
 
 [![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://reactjs.org/docs/getting-started.html)
 [![Express](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)](https://reactjs.org/docs/getting-started.html)
 [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/docs/getting-started.html)
 [![NodeJs](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white)](https://reactjs.org/docs/getting-started.html)
 <br>
-<br>
-
 <p> 
 This is my first MERN stack application :) where I have built a REST API to provide the easy management of sign-in, registration, contact and ordering components. I tested this API using Postman. The frontend and the backend are fully connected and I have handled the CORS error which came while pushing data from the frontend to the backend using proxy server.
 </p>
@@ -25,16 +21,16 @@ This is my first MERN stack application :) where I have built a REST API to prov
 ## Homepage ✨
 
 Built over ReactJS, it is a client-side rendered and responsive homepage. <br/>
-<img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/home.gif" width = "1000px">
+![](readme_pics/home.gif)
 <br/> <br/>
+
+#### Responsiveness ✅
+<img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/responsive.gif" width = "300px" >
 
 Mapped these menu items into card components dynamically from an array. <br/>
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/menu.png" width = "1100px">
 <br/>
 
-#### Responsiveness ✅
-
-<img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/responsive.gif" width = "300px" >
 
 ## Orders 🥗
 
