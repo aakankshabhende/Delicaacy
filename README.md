@@ -24,17 +24,13 @@ This is my first MERN stack application :) where I have built a REST API to prov
 
 ## Homepage ✨
 
-Built over ReactJS, it is a client-side rendered and responsive homepage. <br/>
+Built over ReactJS, it is a client-side rendered and responsive homepage. <br/><br/>
 ![](readme_pics/home.gif)
 <br/> <br/>
 
 #### Responsiveness ✅
 
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/responsive.gif" width = "300px" >
-
-Mapped these menu items into card components dynamically from an array. <br/>
-<img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/menu.png" width = "1100px">
-<br/>
 
 Mapped these menu items into card components dynamically from an array. <br/>
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/menu.png" width = "1100px">
@@ -57,7 +53,7 @@ I have used an API to get food items based on the user search, the result will g
 
 ## Login/Register 👤
 
-For the register component, I have used tokens and sessions to authorize users. Sessions are programmed in a way such that they get deleted automatically after 30 days and the user gets logged out. The passwords are hashed after entering using BcryptJS while user registration and are compared while authenticating the client while signing in. <br/>
+For the register component, I have used tokens and cookies to authorize users. Cookies are programmed in a way such that they get deleted automatically after 30 days and the user gets logged out. The passwords are hashed after entering using BcryptJS while user registration and are compared while authenticating the client while signing in. <br/>
 
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/register.gif" width = "1000px">
 
@@ -91,5 +87,5 @@ If the user is logged in successfully, the logout option will appear. The userna
 ## Backend
 
 My database is hosted on MongoDB Atlas. I have used ExpressJS and NodeJS to make routes, schema and middlewares in the backend. I have used a .env file to configure my application environment constants and to keep them safe. <br/>
-Stored the JWT tokens in an array. <br/>
+Stored the JWT tokens in an array. <br/><br/>
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/db.png" width = "1100px">
