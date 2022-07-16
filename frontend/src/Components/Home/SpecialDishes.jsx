@@ -101,13 +101,14 @@ const SpecialDishes = () => {
                 <div class="heading-menu">
                   <h3 class="text-center mb-5">Breakfast</h3>
                 </div>
+                {/* Mapping MenuItems array elements dynamically into Menu card structure */}
                 {MenuItems.map((val) => {
                   return (
                     <Menu
                       pic={val.img}
                       name={val.name}
                       price={val.price}
-                      spc={val.description}
+                      desc={val.description}
                     />
                   );
                 })}
@@ -122,7 +123,7 @@ const SpecialDishes = () => {
                       pic={val.img}
                       name={val.name}
                       price={val.price}
-                      spc={val.description}
+                      desc={val.description}
                     />
                   );
                 })}
@@ -138,7 +139,7 @@ const SpecialDishes = () => {
                       pic={val.img}
                       name={val.name}
                       price={val.price}
-                      spc={val.description}
+                      desc={val.description}
                     />
                   );
                 })}

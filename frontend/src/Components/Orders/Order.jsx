@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Order = (props) => {
   const [menu, setMenu] = useState({
+    // input box state management
     title: "",
   });
   const search = (e) => {
@@ -14,6 +15,8 @@ const Order = (props) => {
       };
     });
   };
+
+  // Calling Food API
   const add = async () => {
     let searchInputTxt = localStorage.getItem("order-item");
     const res = await fetch(

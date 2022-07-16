@@ -6,21 +6,21 @@ const Login = () => {
   const { state, dispatch } = useContext(userContext); // To maintain user state to check if he/she is logged in or not
 
   const history = useHistory(); // Used to manipulate the current state of the browser history
-  const [user, setuser] = useState({
+  const [user, setUser] = useState({
     email: "",
     pass: "",
   });
 
   let name, value;
-  const subv = (e) => {
+  const subval = (e) => {
     name = e.target.name;
     value = e.target.value;
 
-    setuser({ ...user, [name]: value }); // Array to store dynamic data name will have e.target.value direct because of []
+    setUser({ ...user, [name]: value }); // To store dynamic data name which will have e.target.value directly because of []
   };
 
   const loginuser = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // To prevent automatic reload of form (default behaviour)
     const { email, pass } = user; // Has user inputs from frontend
     const res = await fetch("/login", {
       method: "POST", // Pushing data to the backend database for user verification
@@ -96,7 +96,7 @@ const Login = () => {
                     type="email"
                     name="email"
                     value={user.email}
-                    onChange={subv}
+                    onChange={subval}
                     autoComplete="off"
                     placeholder="Email Address"
                     class="form-control bg-white border-left-0 border-md"
@@ -112,7 +112,7 @@ const Login = () => {
                     type="password"
                     name="pass"
                     value={user.pass}
-                    onChange={subv}
+                    onChange={subval}
                     autoComplete="off"
                     placeholder="Password"
                     class="form-control bg-white border-left-0 border-md"

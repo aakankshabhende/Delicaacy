@@ -17,7 +17,7 @@ import MakeOrder from "./Components/Orders/MakeOrder";
 export const userContext = createContext();
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); // Helped to maitain user state across the whole application
 
   return (
     <>

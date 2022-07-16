@@ -11,7 +11,7 @@ const style = {
 };
 
 const Navbar = () => {
-  const { state, dispatch } = useContext(userContext);
+  const { state, dispatch } = useContext(userContext);  // Helped to maitain user state across the whole application
   if (state) {
     // if else block is used to toggle nav items if user is logged in
     // here if state is true user is logged in
