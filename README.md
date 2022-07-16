@@ -7,6 +7,7 @@ A restaurant-based web application built over the MERN stack to provide clients 
 These instructions will get you a copy of this project running on your local machine for development and testing purposes. It also contains development details. Click [here](https://github.com/aakankshabhende/Delicaacy/blob/main/Getting-Started.md) <br>
 This project contains readable code with proper documentation. In case of queries, feel free to ping me :)
 
+
 ## Tech Stack
 
 [![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)](https://reactjs.org/docs/getting-started.html)
@@ -30,6 +31,10 @@ Built over ReactJS, it is a client-side rendered and responsive homepage. <br/>
 #### Responsiveness ✅
 
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/responsive.gif" width = "300px" >
+
+Mapped these menu items into card components dynamically from an array. <br/>
+<img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/menu.png" width = "1100px">
+<br/>
 
 Mapped these menu items into card components dynamically from an array. <br/>
 <img src="https://github.com/aakankshabhende/Delicaacy/blob/main/readme_pics/menu.png" width = "1100px">
