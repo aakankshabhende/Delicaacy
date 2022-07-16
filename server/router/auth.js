@@ -3,14 +3,14 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 const User = require("../model/userSchema");
 const bcrypt = require("bcryptjs");
-const authenticate = require("../authenticate");
+const authenticate = require("../middleware/authenticate");
 const { response } = require("express");
 
 router.get("/", (req, res) => {
   res.send(`Hello world from the server router js`);
 });
 
-// Register
+// Register route
 router.post("/register", async (req, res) => {
   const { name, email, password, cpassword } = req.body; // got from frontend
   if (!name || !email || !password || !cpassword) {
@@ -33,60 +33,45 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Login
+// Login route
 router.post("/login", async (req, res) => {
-  try {
+  
+  try {   
     const { pass, email } = req.body; // got from frontend
     if (!pass || !email) {
       return res.status(400).json({ error: "Please fill all the fields" });
     }
     const userLogin = await User.findOne({ email: email }); // userLogin == req.body
     if (userLogin) {
-      const match = await bcrypt.compare(
-        pass,
-        userLogin.password,
-        (err, response) => {
-          //if error than throw error
-          if (err) {
-            console.log(err);
-          }
-          //if inpputs match user logs in
-          if (!response) {
-            return res.status(400).json({ error: "Invalid Credentials" });
-          } else {
-            return res
-              .status(201)
-              .json({ message: "You signed in successfully" });
-          }
-        }
-      );
+      const match = await bcrypt.compare(pass, userLogin.password);
       const token = await userLogin.generateAuthToken();
-      const accessToken = userlogin.generateAccessToken(user);
-      const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
-      res
-        .header("x-auth-auth", token)
-        .send(JSON.stringify(_.pick(userLogin, ["email", "password"])));
-      res.cookie("jwttoken", token, {
+
+      res.cookie("jwt-token", token, {
         expires: new Date(Date.now() + 25892000000), // 30 days in milliseconds automatic session expire
         httpOnly: true,
       });
-    } else {
-      return res.status(400).json({ error: "Please register first!" });
+    if(!match){
+      return res.status(400).json({ error: "Invalid Credentials!" });
     }
-  } catch (err) {
+    else {
+      return res.json({ message : "User sign-in successfully!" });
+    }
+  }}
+  catch(err) {
     console.log(err);
   }
 });
 
-// LogOut
+// LogOut route
 router.delete("/logout", (req, res) => {
   refreshTokens = refreshTokens.filter((token) => token !== req.body.token);
   res.sendStatus(204);
 });
 
-// About
-router.get("/about", authenticate, (req, res) => {
+// About route
+/* router.get("/about", authenticate, (req, res) => {
   res.send(req.rootuser);
 });
+*/
 
 module.exports = router;

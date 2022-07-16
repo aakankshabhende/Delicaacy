@@ -1,7 +1,7 @@
 import React from "react";
 
 const Menu = (props) => {
-  const { pic, spc, price, name } = props; // Structure of menu items of Top selling items
+  const { pic, desc, price, name } = props; // Structure of menu items of Top selling items
   return (
     <>
       {/* // Array of menu items are mapped into card components dynamically. */}
@@ -18,7 +18,7 @@ const Menu = (props) => {
               <h4 class="text-muted menu-price">{price}</h4>
             </div>
           </div>
-          <p>{spc}</p>
+          <p>{desc}</p>
         </div>
       </div>
     </>
