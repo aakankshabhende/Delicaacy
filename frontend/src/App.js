@@ -13,6 +13,7 @@ import Logout from "./Components/User/Logout";
 import { createContext, useReducer } from "react";
 import { initialState, reducer } from "../src/Components/Usereducer";
 import MakeOrder from "./Components/Orders/MakeOrder";
+import Payment from "./Components/Payment/Payment";
 
 export const userContext = createContext();
 
@@ -30,8 +31,8 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/about">
-            <About />
+          <Route exact path="/payment">
+            <Payment/>
           </Route>
           <Route exact path="/login">
             <Login />
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route exact path="/orders">
             <MakeOrder />
+          </Route>
+          <Route exact path="/about">
+            <About />
           </Route>
           <Route exact path="/logout">
             <Logout />

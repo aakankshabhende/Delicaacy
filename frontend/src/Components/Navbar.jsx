@@ -1,6 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState} from "react";
 import { NavLink } from "react-router-dom";
 import { userContext } from "../App";
+import Badge from "@material-ui/core/Badge";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { setCart } from "./Usereducer";
 
 // Using style as inline CSS for Delicaacy heading
 const style = {
@@ -10,8 +13,11 @@ const style = {
   "font-size": "3.5rem",
 };
 
+
 const Navbar = () => {
   const { state, dispatch } = useContext(userContext);  // Helped to maitain user state across the whole application
+  const {itemCount} = useContext(setCart)
+
   if (state) {
     // if else block is used to toggle nav items if user is logged in
     // here if state is true user is logged in
@@ -58,7 +64,7 @@ const Navbar = () => {
                   </li>
                   <li className="nav-item">
                     <NavLink to="/contact" className="nav-link">
-                      Contact
+                      Contact Us
                     </NavLink>
                   </li>
                 </div>
@@ -79,7 +85,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item profile">
-                    <NavLink to="/" className="nav-link">
+                    <NavLink to="/about" className="nav-link">
                       <i class="fa fa-user" aria-hidden="true">
                         &ensp;
                       </i>
@@ -93,6 +99,13 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                 </div>
+                <li className="nav-item">
+                  <a id="side-search-open" className="nav-link" href="/payment">
+                  <Badge color="secondary" badgeContent={itemCount}>
+                <ShoppingCartIcon />
+              </Badge>
+                  </a>
+                </li>
                 <li className="nav-item">
                   <a id="side-search-open" className="nav-link" href="#">
                     <span className="lnr lnr-magnifier"></span>
@@ -181,15 +194,26 @@ const Navbar = () => {
                   </li>
                 </div>
                 <li className="nav-item">
+                  <a id="side-search-open" className="nav-link" href="/payment">
+                  <Badge color="secondary" badgeContent={itemCount}>
+                <ShoppingCartIcon />
+              </Badge>
+                  </a>
+                </li>
+                
+                <li className="nav-item">
                   <a id="side-search-open" className="nav-link" href="/orders">
                     <span className="lnr lnr-magnifier"></span>
                   </a>
                 </li>
+
+                
               </ul>
             </div>
           </div>
         </nav>
       </>
+      
     );
   }
 };

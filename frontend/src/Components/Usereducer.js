@@ -1,3 +1,5 @@
+import { createContext } from "react";
+
 export const initialState = null;
 
 export const reducer = (state, action) => {
@@ -6,3 +8,4 @@ export const reducer = (state, action) => {
     }
     return state;
 }
+

@@ -25,6 +25,7 @@ const Header = () => {
                     border: "none",
                     borderRadius: "30px",
                     padding: "10px",
+                    width:"150px",
                     fontSize: "18px",
                   }}
                 >

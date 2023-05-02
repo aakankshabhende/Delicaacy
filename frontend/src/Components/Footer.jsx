@@ -102,7 +102,7 @@ const Footer = () => {
                           type="submit"
                           class="btn btn-link"
                         >
-                          <i class="fa fa-paper-plane"></i>
+                          <i class="fa fa-paper-plane" style={{backgroundColour:'transparents'}}></i>
                         </button>
                       </div>
                     </div>
